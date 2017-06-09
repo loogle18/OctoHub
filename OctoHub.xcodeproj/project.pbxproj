@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		39D886B75A1009A534917169 /* Pods_OctoHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9A084941F1E42A84630570 /* Pods_OctoHub.framework */; };
+		A14F2FA81EEAFE94001D9A4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F2FA71EEAFE94001D9A4D /* AppDelegate.swift */; };
+		A14F2FAA1EEAFE94001D9A4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F2FA91EEAFE94001D9A4D /* ViewController.swift */; };
+		A14F2FAD1EEAFE94001D9A4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14F2FAB1EEAFE94001D9A4D /* Main.storyboard */; };
+		A14F2FAF1EEAFE94001D9A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14F2FAE1EEAFE94001D9A4D /* Assets.xcassets */; };
+		A14F2FB21EEAFE94001D9A4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14F2FB01EEAFE94001D9A4D /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5412971F0BDAEF27E4C6CC75 /* Pods-OctoHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctoHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-OctoHub/Pods-OctoHub.release.xcconfig"; sourceTree = "<group>"; };
+		784A551D995DA721127FE20C /* Pods-OctoHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctoHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OctoHub/Pods-OctoHub.debug.xcconfig"; sourceTree = "<group>"; };
+		A14F2FA41EEAFE94001D9A4D /* OctoHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctoHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A14F2FA71EEAFE94001D9A4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A14F2FA91EEAFE94001D9A4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A14F2FAC1EEAFE94001D9A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A14F2FAE1EEAFE94001D9A4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A14F2FB11EEAFE94001D9A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A14F2FB31EEAFE94001D9A4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA9A084941F1E42A84630570 /* Pods_OctoHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OctoHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A14F2FA11EEAFE94001D9A4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39D886B75A1009A534917169 /* Pods_OctoHub.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6CDE5841BC4860D5A0B13CF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA9A084941F1E42A84630570 /* Pods_OctoHub.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A14F2F9B1EEAFE94001D9A4D = {
+			isa = PBXGroup;
+			children = (
+				A14F2FA61EEAFE94001D9A4D /* OctoHub */,
+				A14F2FA51EEAFE94001D9A4D /* Products */,
+				DA5654F5F9374F6571EE5E3E /* Pods */,
+				6CDE5841BC4860D5A0B13CF8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A14F2FA51EEAFE94001D9A4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A14F2FA41EEAFE94001D9A4D /* OctoHub.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A14F2FA61EEAFE94001D9A4D /* OctoHub */ = {
+			isa = PBXGroup;
+			children = (
+				A14F2FA71EEAFE94001D9A4D /* AppDelegate.swift */,
+				A14F2FA91EEAFE94001D9A4D /* ViewController.swift */,
+				A14F2FAB1EEAFE94001D9A4D /* Main.storyboard */,
+				A14F2FAE1EEAFE94001D9A4D /* Assets.xcassets */,
+				A14F2FB01EEAFE94001D9A4D /* LaunchScreen.storyboard */,
+				A14F2FB31EEAFE94001D9A4D /* Info.plist */,
+			);
+			path = OctoHub;
+			sourceTree = "<group>";
+		};
+		DA5654F5F9374F6571EE5E3E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				784A551D995DA721127FE20C /* Pods-OctoHub.debug.xcconfig */,
+				5412971F0BDAEF27E4C6CC75 /* Pods-OctoHub.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A14F2FA31EEAFE94001D9A4D /* OctoHub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A14F2FB61EEAFE94001D9A4D /* Build configuration list for PBXNativeTarget "OctoHub" */;
+			buildPhases = (
+				DB39FFC7AF38E248424F484E /* [CP] Check Pods Manifest.lock */,
+				A14F2FA01EEAFE94001D9A4D /* Sources */,
+				A14F2FA11EEAFE94001D9A4D /* Frameworks */,
+				A14F2FA21EEAFE94001D9A4D /* Resources */,
+				10BB0CC947749BEBF85010FC /* [CP] Embed Pods Frameworks */,
+				2909F08C5B59F21F66C5D982 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OctoHub;
+			productName = OctoHub;
+			productReference = A14F2FA41EEAFE94001D9A4D /* OctoHub.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A14F2F9C1EEAFE94001D9A4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = loogle18;
+				TargetAttributes = {
+					A14F2FA31EEAFE94001D9A4D = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = JF539DV76S;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A14F2F9F1EEAFE94001D9A4D /* Build configuration list for PBXProject "OctoHub" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A14F2F9B1EEAFE94001D9A4D;
+			productRefGroup = A14F2FA51EEAFE94001D9A4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A14F2FA31EEAFE94001D9A4D /* OctoHub */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A14F2FA21EEAFE94001D9A4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A14F2FB21EEAFE94001D9A4D /* LaunchScreen.storyboard in Resources */,
+				A14F2FAF1EEAFE94001D9A4D /* Assets.xcassets in Resources */,
+				A14F2FAD1EEAFE94001D9A4D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10BB0CC947749BEBF85010FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OctoHub/Pods-OctoHub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2909F08C5B59F21F66C5D982 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OctoHub/Pods-OctoHub-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB39FFC7AF38E248424F484E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A14F2FA01EEAFE94001D9A4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A14F2FAA1EEAFE94001D9A4D /* ViewController.swift in Sources */,
+				A14F2FA81EEAFE94001D9A4D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A14F2FAB1EEAFE94001D9A4D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A14F2FAC1EEAFE94001D9A4D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A14F2FB01EEAFE94001D9A4D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A14F2FB11EEAFE94001D9A4D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A14F2FB41EEAFE94001D9A4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A14F2FB51EEAFE94001D9A4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A14F2FB71EEAFE94001D9A4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 784A551D995DA721127FE20C /* Pods-OctoHub.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JF539DV76S;
+				INFOPLIST_FILE = OctoHub/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.loogle18.OctoHub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A14F2FB81EEAFE94001D9A4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5412971F0BDAEF27E4C6CC75 /* Pods-OctoHub.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JF539DV76S;
+				INFOPLIST_FILE = OctoHub/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.loogle18.OctoHub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A14F2F9F1EEAFE94001D9A4D /* Build configuration list for PBXProject "OctoHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A14F2FB41EEAFE94001D9A4D /* Debug */,
+				A14F2FB51EEAFE94001D9A4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A14F2FB61EEAFE94001D9A4D /* Build configuration list for PBXNativeTarget "OctoHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A14F2FB71EEAFE94001D9A4D /* Debug */,
+				A14F2FB81EEAFE94001D9A4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A14F2F9C1EEAFE94001D9A4D /* Project object */;
+}
