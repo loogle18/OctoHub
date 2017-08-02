@@ -13,6 +13,7 @@
 		A14F2FAD1EEAFE94001D9A4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14F2FAB1EEAFE94001D9A4D /* Main.storyboard */; };
 		A14F2FAF1EEAFE94001D9A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14F2FAE1EEAFE94001D9A4D /* Assets.xcassets */; };
 		A14F2FB21EEAFE94001D9A4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14F2FB01EEAFE94001D9A4D /* LaunchScreen.storyboard */; };
+		A1F36BF41F30EB0D002C1DAA /* GithubAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F36BF31F30EB0D002C1DAA /* GithubAuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		A14F2FAE1EEAFE94001D9A4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A14F2FB11EEAFE94001D9A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A14F2FB31EEAFE94001D9A4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1F36BF31F30EB0D002C1DAA /* GithubAuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAuthService.swift; sourceTree = "<group>"; };
 		AA9A084941F1E42A84630570 /* Pods_OctoHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OctoHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 		A14F2FA61EEAFE94001D9A4D /* OctoHub */ = {
 			isa = PBXGroup;
 			children = (
+				A1F36BF21F30EAE5002C1DAA /* Services */,
 				A14F2FA71EEAFE94001D9A4D /* AppDelegate.swift */,
 				A14F2FA91EEAFE94001D9A4D /* ViewController.swift */,
 				A14F2FAB1EEAFE94001D9A4D /* Main.storyboard */,
@@ -77,6 +80,14 @@
 				A14F2FB31EEAFE94001D9A4D /* Info.plist */,
 			);
 			path = OctoHub;
+			sourceTree = "<group>";
+		};
+		A1F36BF21F30EAE5002C1DAA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A1F36BF31F30EB0D002C1DAA /* GithubAuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		DA5654F5F9374F6571EE5E3E /* Pods */ = {
@@ -213,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A14F2FAA1EEAFE94001D9A4D /* ViewController.swift in Sources */,
+				A1F36BF41F30EB0D002C1DAA /* GithubAuthService.swift in Sources */,
 				A14F2FA81EEAFE94001D9A4D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,7 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JF539DV76S;
 				INFOPLIST_FILE = OctoHub/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.loogle18.OctoHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -354,7 +366,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JF539DV76S;
 				INFOPLIST_FILE = OctoHub/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.loogle18.OctoHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
