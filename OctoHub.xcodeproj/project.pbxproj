@@ -14,6 +14,7 @@
 		A14F2FB21EEAFE94001D9A4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14F2FB01EEAFE94001D9A4D /* LaunchScreen.storyboard */; };
 		A199AADB1F32482C00DE9130 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199AADA1F32482C00DE9130 /* ProfileViewController.swift */; };
 		A199AADD1F32498600DE9130 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199AADC1F32498600DE9130 /* LoginViewController.swift */; };
+		A199AAE41F3265ED00DE9130 /* AnimatableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199AAE31F3265ED00DE9130 /* AnimatableUITextField.swift */; };
 		A1F36BF41F30EB0D002C1DAA /* GithubAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F36BF31F30EB0D002C1DAA /* GithubAuthService.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		A14F2FB31EEAFE94001D9A4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A199AADA1F32482C00DE9130 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A199AADC1F32498600DE9130 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A199AAE31F3265ED00DE9130 /* AnimatableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableUITextField.swift; sourceTree = "<group>"; };
 		A1F36BF31F30EB0D002C1DAA /* GithubAuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAuthService.swift; sourceTree = "<group>"; };
 		AA9A084941F1E42A84630570 /* Pods_OctoHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OctoHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 		A14F2FA61EEAFE94001D9A4D /* OctoHub */ = {
 			isa = PBXGroup;
 			children = (
+				A199AAE21F3265D900DE9130 /* TextFields */,
 				A199AAD91F32478400DE9130 /* ViewControllers */,
 				A1F36BF21F30EAE5002C1DAA /* Services */,
 				A14F2FA71EEAFE94001D9A4D /* AppDelegate.swift */,
@@ -91,6 +94,14 @@
 				A199AADC1F32498600DE9130 /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A199AAE21F3265D900DE9130 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				A199AAE31F3265ED00DE9130 /* AnimatableUITextField.swift */,
+			);
+			path = TextFields;
 			sourceTree = "<group>";
 		};
 		A1F36BF21F30EAE5002C1DAA /* Services */ = {
@@ -234,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A199AAE41F3265ED00DE9130 /* AnimatableUITextField.swift in Sources */,
 				A199AADD1F32498600DE9130 /* LoginViewController.swift in Sources */,
 				A199AADB1F32482C00DE9130 /* ProfileViewController.swift in Sources */,
 				A1F36BF41F30EB0D002C1DAA /* GithubAuthService.swift in Sources */,
