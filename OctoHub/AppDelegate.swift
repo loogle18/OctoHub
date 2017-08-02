@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import Locksmith
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let tokenExist = Locksmith.loadDataForUserAccount(userAccount: "octoHubUser")?["token"] != nil
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewControllerIdentifier = tokenExist ? "ProfileVC" : "LoginVC"
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: initialViewControllerIdentifier)
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

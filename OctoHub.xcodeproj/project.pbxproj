@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		39D886B75A1009A534917169 /* Pods_OctoHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9A084941F1E42A84630570 /* Pods_OctoHub.framework */; };
 		A14F2FA81EEAFE94001D9A4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F2FA71EEAFE94001D9A4D /* AppDelegate.swift */; };
-		A14F2FAA1EEAFE94001D9A4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F2FA91EEAFE94001D9A4D /* ViewController.swift */; };
 		A14F2FAD1EEAFE94001D9A4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14F2FAB1EEAFE94001D9A4D /* Main.storyboard */; };
 		A14F2FAF1EEAFE94001D9A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14F2FAE1EEAFE94001D9A4D /* Assets.xcassets */; };
 		A14F2FB21EEAFE94001D9A4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14F2FB01EEAFE94001D9A4D /* LaunchScreen.storyboard */; };
+		A199AADB1F32482C00DE9130 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199AADA1F32482C00DE9130 /* ProfileViewController.swift */; };
+		A199AADD1F32498600DE9130 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199AADC1F32498600DE9130 /* LoginViewController.swift */; };
 		A1F36BF41F30EB0D002C1DAA /* GithubAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F36BF31F30EB0D002C1DAA /* GithubAuthService.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,11 +22,12 @@
 		784A551D995DA721127FE20C /* Pods-OctoHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctoHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OctoHub/Pods-OctoHub.debug.xcconfig"; sourceTree = "<group>"; };
 		A14F2FA41EEAFE94001D9A4D /* OctoHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctoHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A14F2FA71EEAFE94001D9A4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A14F2FA91EEAFE94001D9A4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A14F2FAC1EEAFE94001D9A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A14F2FAE1EEAFE94001D9A4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A14F2FB11EEAFE94001D9A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A14F2FB31EEAFE94001D9A4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A199AADA1F32482C00DE9130 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A199AADC1F32498600DE9130 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A1F36BF31F30EB0D002C1DAA /* GithubAuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAuthService.swift; sourceTree = "<group>"; };
 		AA9A084941F1E42A84630570 /* Pods_OctoHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OctoHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,15 +73,24 @@
 		A14F2FA61EEAFE94001D9A4D /* OctoHub */ = {
 			isa = PBXGroup;
 			children = (
+				A199AAD91F32478400DE9130 /* ViewControllers */,
 				A1F36BF21F30EAE5002C1DAA /* Services */,
 				A14F2FA71EEAFE94001D9A4D /* AppDelegate.swift */,
-				A14F2FA91EEAFE94001D9A4D /* ViewController.swift */,
 				A14F2FAB1EEAFE94001D9A4D /* Main.storyboard */,
 				A14F2FAE1EEAFE94001D9A4D /* Assets.xcassets */,
 				A14F2FB01EEAFE94001D9A4D /* LaunchScreen.storyboard */,
 				A14F2FB31EEAFE94001D9A4D /* Info.plist */,
 			);
 			path = OctoHub;
+			sourceTree = "<group>";
+		};
+		A199AAD91F32478400DE9130 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A199AADA1F32482C00DE9130 /* ProfileViewController.swift */,
+				A199AADC1F32498600DE9130 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		A1F36BF21F30EAE5002C1DAA /* Services */ = {
@@ -223,7 +234,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A14F2FAA1EEAFE94001D9A4D /* ViewController.swift in Sources */,
+				A199AADD1F32498600DE9130 /* LoginViewController.swift in Sources */,
+				A199AADB1F32482C00DE9130 /* ProfileViewController.swift in Sources */,
 				A1F36BF41F30EB0D002C1DAA /* GithubAuthService.swift in Sources */,
 				A14F2FA81EEAFE94001D9A4D /* AppDelegate.swift in Sources */,
 			);
