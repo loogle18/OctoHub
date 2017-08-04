@@ -5,7 +5,6 @@ target 'OctoHub' do
   inhibit_all_warnings!
 
   pod 'SWRevealViewController', '<= 2.3.0'
-  pod 'JVFloatLabeledTextField'
   pod 'OctoKit.swift'
   pod 'Alamofire', '~> 4.0'
   pod 'Locksmith'

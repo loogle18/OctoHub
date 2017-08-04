@@ -9,6 +9,9 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    @IBOutlet weak var loginField: AnimatableUITextField!
+    @IBOutlet weak var passwordField: AnimatableUITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
