@@ -70,6 +70,16 @@ class AnimatableUITextField: UITextField, UITextFieldDelegate {
         setOriginPlaceholder()
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        
+        return true
+    }
+    
     private func setOriginPlaceholder() {
         self.attributedPlaceholder = NSAttributedString(string: originPlaceholder,
                                                         attributes: [NSForegroundColorAttributeName: UIColor.customDarkGray])
