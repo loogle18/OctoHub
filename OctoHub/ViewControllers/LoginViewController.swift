@@ -13,6 +13,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: AnimatableUITextField!
     @IBOutlet weak var signInButton: UIButton!
     
+    var isStatusBarHidden = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,7 +29,14 @@ class LoginViewController: UIViewController {
                                                selector: #selector(self.keyboardWillHide),
                                                name: NSNotification.Name.UIKeyboardWillHide,
                                                object: nil)
-
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return UIStatusBarAnimation.slide
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return isStatusBarHidden
     }
     
     @IBAction func signInAction() {
@@ -35,17 +44,21 @@ class LoginViewController: UIViewController {
     }
     
     func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
+        if self.view.frame.origin.y == 0 {
+            self.view.frame.origin.y -= signInButton.frame.height
+            isStatusBarHidden = true
+            UIView.animate(withDuration: 0.5) { () -> Void in
+                self.setNeedsStatusBarAppearanceUpdate()
             }
         }
     }
     
     func keyboardWillHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y != 0 {
-                self.view.frame.origin.y += keyboardSize.height
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y += signInButton.frame.height
+            isStatusBarHidden = false
+            UIView.animate(withDuration: 0.5) { () -> Void in
+                self.setNeedsStatusBarAppearanceUpdate()
             }
         }
     }
