@@ -51,10 +51,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Qw1-6P-yko" customClass="AnimatableUITextField" customModule="OctoHub" customModuleProvider="target">
-                                <rect key="frame" x="16" y="258" width="343" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Qw1-6P-yko" customClass="AnimatableUITextField" customModule="OctoHub" customModuleProvider="target">
+                                <rect key="frame" x="43.5" y="258" width="288" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="09L-fj-Sy7"/>
+                                    <constraint firstAttribute="height" constant="44" id="61U-Hn-Z6o"/>
+                                </constraints>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
@@ -65,9 +69,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0XV-kT-x7i" customClass="AnimatableUITextField" customModule="OctoHub" customModuleProvider="target">
-                                <rect key="frame" x="16" y="332" width="343" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0XV-kT-x7i" customClass="AnimatableUITextField" customModule="OctoHub" customModuleProvider="target">
+                                <rect key="frame" x="43.5" y="344" width="288" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="WTv-XM-yw2"/>
+                                    <constraint firstAttribute="width" constant="288" id="ob0-1V-6wY"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
@@ -80,17 +87,40 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTS-nb-gb9">
+                                <rect key="frame" x="43.5" y="441" width="288" height="57"/>
+                                <color key="backgroundColor" red="0.26666666666666666" green="0.85882352941176465" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="IBI-lS-fzj"/>
+                                    <constraint firstAttribute="width" constant="288" id="yhh-ds-3pe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="tintColor" red="0.0" green="0.46274509803921571" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Sign in">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dTS-nb-gb9" firstAttribute="top" secondItem="0XV-kT-x7i" secondAttribute="bottom" constant="53" id="5rS-OW-dec"/>
+                            <constraint firstItem="0XV-kT-x7i" firstAttribute="top" secondItem="Qw1-6P-yko" secondAttribute="bottom" constant="42" id="Eer-uH-zp8"/>
+                            <constraint firstItem="dTS-nb-gb9" firstAttribute="trailing" secondItem="0XV-kT-x7i" secondAttribute="trailing" id="LY1-NF-94t"/>
+                            <constraint firstItem="6tZ-YA-Dmn" firstAttribute="top" secondItem="dTS-nb-gb9" secondAttribute="bottom" constant="169" id="M9U-iL-rPr"/>
+                            <constraint firstItem="dTS-nb-gb9" firstAttribute="leading" secondItem="0XV-kT-x7i" secondAttribute="leading" id="kXI-X7-ecx"/>
+                            <constraint firstItem="Qw1-6P-yko" firstAttribute="leading" secondItem="0XV-kT-x7i" secondAttribute="leading" id="lAx-g1-jsC"/>
+                            <constraint firstItem="dTS-nb-gb9" firstAttribute="centerX" secondItem="FAF-HJ-rzd" secondAttribute="centerX" id="v0Z-eS-fKG"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="loginField" destination="Qw1-6P-yko" id="Pgq-S7-oL2"/>
                         <outlet property="passwordField" destination="0XV-kT-x7i" id="JgK-In-Ewh"/>
+                        <outlet property="signInButton" destination="dTS-nb-gb9" id="gzv-j8-sQb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X4i-Yn-G5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48.799999999999997" y="-299.10044977511245"/>
+            <point key="canvasLocation" x="48.75" y="-300"/>
         </scene>
     </scenes>
 </document>

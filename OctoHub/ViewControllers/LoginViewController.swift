@@ -11,8 +11,11 @@ import UIKit
 class LoginViewController: UIViewController {
     @IBOutlet weak var loginField: AnimatableUITextField!
     @IBOutlet weak var passwordField: AnimatableUITextField!
+    @IBOutlet weak var signInButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        signInButton.layer.cornerRadius = 4
     }
 }
