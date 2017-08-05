@@ -18,4 +18,7 @@ class LoginViewController: UIViewController {
         
         signInButton.layer.cornerRadius = 4
     }
+    @IBAction func signInAction() {
+        let (isLoginValid, isPasswordValid) = (loginField.validate(), passwordField.validate())
+    }
 }
