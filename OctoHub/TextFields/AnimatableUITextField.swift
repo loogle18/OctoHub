@@ -21,10 +21,10 @@ class AnimatableUITextField: UITextField, UITextFieldDelegate {
         super.init(coder: decoder)!
         self.layer.cornerRadius = 4
         self.layer.borderWidth = 1.0
-        self.layer.borderColor = UIColor.gray.cgColor
+        self.layer.borderColor = UIColor.customGray.cgColor
+        self.layer.backgroundColor = UIColor.customLightGray.cgColor
         self.originPlaceholder = placeholder
-        self.attributedPlaceholder = NSAttributedString(string: originPlaceholder, attributes: [NSForegroundColorAttributeName: UIColor.gray])
-        
+        setOriginPlaceholder()
         delegate = self
         self.addTarget(self, action: #selector(AnimatableUITextField.textFieldChanged(_:)), for: UIControlEvents.editingChanged)
     }
@@ -38,29 +38,41 @@ class AnimatableUITextField: UITextField, UITextFieldDelegate {
     }
     
     func validate() -> Bool {
+        var newPlaceholderText = originPlaceholder
+        var isValid = true
+        
         if ((self.text ?? "").isEmpty) {
-            shake()
-            self.placeholder = originPlaceholder + " can't be blank"
-            self.text = ""
-            return false
+            newPlaceholderText = originPlaceholder + " can't be blank"
+            isValid = false
         }
         
         if (self.originPlaceholder == "Password" && self.text!.length < minimumPasswordLength) {
-            shake()
-            self.placeholder = "Password is too short (min. is \(minimumPasswordLength) characters)"
-            self.text = ""
-            return false
+            isValid = false
+            newPlaceholderText = "Password is too short (min. is \(minimumPasswordLength) characters)"
         }
         
-        return true
+        if (!isValid) {
+            shake()
+            self.text = ""
+        }
+        
+        self.attributedPlaceholder = NSAttributedString(string: newPlaceholderText!,
+                                                        attributes: [NSForegroundColorAttributeName: UIColor.customDarkGray])
+        
+        return isValid
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.placeholder = originPlaceholder
+        setOriginPlaceholder()
     }
     
     func textFieldChanged(_ textField: UITextField) {
-        self.placeholder = originPlaceholder
+        setOriginPlaceholder()
+    }
+    
+    private func setOriginPlaceholder() {
+        self.attributedPlaceholder = NSAttributedString(string: originPlaceholder,
+                                                        attributes: [NSForegroundColorAttributeName: UIColor.customDarkGray])
     }
 
     private func shake() {

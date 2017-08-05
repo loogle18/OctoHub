@@ -16,6 +16,7 @@
 		A199AADD1F32498600DE9130 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199AADC1F32498600DE9130 /* LoginViewController.swift */; };
 		A199AAE41F3265ED00DE9130 /* AnimatableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199AAE31F3265ED00DE9130 /* AnimatableUITextField.swift */; };
 		A1E93FA61F36144D00FDFEE0 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E93FA51F36144D00FDFEE0 /* String.swift */; };
+		A1E93FA81F36342900FDFEE0 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E93FA71F36342900FDFEE0 /* UIColor.swift */; };
 		A1F36BF41F30EB0D002C1DAA /* GithubAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F36BF31F30EB0D002C1DAA /* GithubAuthService.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		A199AADC1F32498600DE9130 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A199AAE31F3265ED00DE9130 /* AnimatableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableUITextField.swift; sourceTree = "<group>"; };
 		A1E93FA51F36144D00FDFEE0 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		A1E93FA71F36342900FDFEE0 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		A1F36BF31F30EB0D002C1DAA /* GithubAuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAuthService.swift; sourceTree = "<group>"; };
 		AA9A084941F1E42A84630570 /* Pods_OctoHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OctoHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				A1E93FA51F36144D00FDFEE0 /* String.swift */,
+				A1E93FA71F36342900FDFEE0 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1E93FA61F36144D00FDFEE0 /* String.swift in Sources */,
+				A1E93FA81F36342900FDFEE0 /* UIColor.swift in Sources */,
 				A199AAE41F3265ED00DE9130 /* AnimatableUITextField.swift in Sources */,
 				A199AADD1F32498600DE9130 /* LoginViewController.swift in Sources */,
 				A199AADB1F32482C00DE9130 /* ProfileViewController.swift in Sources */,

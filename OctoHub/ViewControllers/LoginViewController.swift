@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         signInButton.layer.cornerRadius = 4
+        signInButton.layer.backgroundColor = UIColor.customBlue.cgColor
     }
     @IBAction func signInAction() {
         let (isLoginValid, isPasswordValid) = (loginField.validate(), passwordField.validate())
