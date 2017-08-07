@@ -134,6 +134,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="login-background" width="540" height="960"/>
+        <image name="login-background" width="375" height="667"/>
     </resources>
 </document>
