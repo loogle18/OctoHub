@@ -40,7 +40,15 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signInAction() {
-        let (isLoginValid, isPasswordValid) = (loginField.validate(), passwordField.validate())
+        if (loginField.validate() && passwordField.validate()) {
+            GithubAuthService.createNewAuthentification(from: loginField.text!, and: passwordField.text!) { config in
+                DispatchQueue.main.async {
+                    let profileVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
+                    profileVC.config = config
+                    self.present(profileVC, animated: true, completion: nil)
+                }
+            }
+        }
     }
     
     func keyboardWillShow(notification: NSNotification) {

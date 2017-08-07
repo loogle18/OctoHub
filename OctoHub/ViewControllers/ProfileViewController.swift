@@ -7,9 +7,11 @@
 //
 
 import UIKit
-import Locksmith
+import Octokit
 
 class ProfileViewController: UIViewController {
+    var config: TokenConfiguration?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
