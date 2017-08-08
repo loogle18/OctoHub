@@ -9,10 +9,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="TFA-QZ-OuD">
+            <objects>
+                <navigationController storyboardIdentifier="ProfileNVC" id="jEM-DQ-KGP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eVO-os-cFP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rO3-Um-hzz" kind="relationship" relationship="rootViewController" id="gop-oy-3X7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W1k-mk-srd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-881" y="440"/>
+        </scene>
+        <!--Profile-->
         <scene sceneID="Qat-9w-RNa">
             <objects>
-                <viewController storyboardIdentifier="ProfileVC" id="rO3-Um-hzz" customClass="ProfileViewController" customModule="OctoHub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" title="Profile" id="rO3-Um-hzz" customClass="ProfileViewController" customModule="OctoHub" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cra-1E-wGt"/>
                         <viewControllerLayoutGuide type="bottom" id="Gm9-4q-Joj"/>
@@ -20,8 +36,26 @@
                     <view key="view" contentMode="scaleToFill" id="ovg-bc-XwO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axG-uQ-fN2">
+                                <rect key="frame" x="0.0" y="64" width="375" height="136"/>
+                                <color key="backgroundColor" red="0.0" green="0.46274509800000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="136" id="iQQ-db-4gC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="axG-uQ-fN2" firstAttribute="leading" secondItem="ovg-bc-XwO" secondAttribute="leading" id="TS5-dt-gr5"/>
+                            <constraint firstAttribute="trailing" secondItem="axG-uQ-fN2" secondAttribute="trailing" id="clD-GH-lOU"/>
+                            <constraint firstItem="axG-uQ-fN2" firstAttribute="top" secondItem="Cra-1E-wGt" secondAttribute="bottom" id="e8X-IK-GST"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="T4d-kr-Iyr"/>
+                    <connections>
+                        <outlet property="topProfileView" destination="axG-uQ-fN2" id="kK8-4e-Y5A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qE5-bN-MpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,7 +74,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-background" translatesAutoresizingMaskIntoConstraints="NO" id="2cL-MH-kWg">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aD0-lR-bZi">
                                 <rect key="frame" x="43.5" y="217" width="288" height="233"/>

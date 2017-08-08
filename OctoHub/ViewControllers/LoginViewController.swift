@@ -44,9 +44,11 @@ class LoginViewController: UIViewController {
         if (isLoginValid && isPasswordValid) {
             GithubAuthService.createNewAuthentification(from: loginField.text!, and: passwordField.text!) { config in
                 DispatchQueue.main.async {
-                    let profileVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
+                    let profileNVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileNVC") as! UINavigationController
+                    let profileVC = profileNVC.topViewController as! ProfileViewController
                     profileVC.config = config
-                    self.present(profileVC, animated: true, completion: nil)
+                    
+                    self.present(profileNVC, animated: true, completion: nil)
                 }
             }
         }

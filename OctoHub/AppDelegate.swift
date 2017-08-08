@@ -19,9 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         if let token = Locksmith.loadDataForUserAccount(userAccount: "octoHubUser")?["token"] as? String {
-            let profileVC = storyboard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
+            let profileNVC = storyboard.instantiateViewController(withIdentifier: "ProfileNVC") as! UINavigationController
+            let profileVC = profileNVC.topViewController as! ProfileViewController
             profileVC.config = TokenConfiguration(token)
-            self.window?.rootViewController = profileVC
+            self.window?.rootViewController = profileNVC
         } else {
             self.window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC")
         }
