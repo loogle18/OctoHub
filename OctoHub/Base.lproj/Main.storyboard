@@ -13,9 +13,10 @@
         <scene sceneID="TFA-QZ-OuD">
             <objects>
                 <navigationController storyboardIdentifier="ProfileNVC" id="jEM-DQ-KGP" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eVO-os-cFP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="eVO-os-cFP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.46274509800000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="rO3-Um-hzz" kind="relationship" relationship="rootViewController" id="gop-oy-3X7"/>
