@@ -47,9 +47,7 @@ class AnimatableUITextField: UITextField, UITextFieldDelegate {
         if ((self.text ?? "").isEmpty) {
             newPlaceholderText = originPlaceholder + " can't be blank"
             isValid = false
-        }
-        
-        if (self.originPlaceholder == "Password" && self.text!.length < minimumPasswordLength) {
+        } else if (self.originPlaceholder == "Password" && self.text!.length < minimumPasswordLength) {
             isValid = false
             newPlaceholderText = "Password is too short (min. is \(minimumPasswordLength) characters)"
         }
