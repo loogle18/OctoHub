@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Octokit
 
 class ProfileViewController: UIViewController {
     @IBOutlet weak var topProfileView: UIView!
@@ -16,7 +15,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var userLoginLabel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
     
-    var config: TokenConfiguration!
+    var token: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,20 +30,14 @@ class ProfileViewController: UIViewController {
     }
     
     func loadCurrentUser() {
-        Octokit(config).me() { response in
+        GithubService(token).me() { response in
             switch response {
             case .success(let user):
                 DispatchQueue.main.async {
-                    if let avatarUrl = user.avatarURL, let imageUrl = URL(string: avatarUrl) {
-                        var imageData: Data?
-                        do { try imageData = Data(contentsOf: imageUrl) } catch { print("Something went wrong while fetching image") }
-                        if (imageUrl != nil) {
-                            self.avatar.image = UIImage(data: imageData!)
-                        }
-                    }
                     self.userNameLabel.text = user.name
                     self.userLoginLabel.text = user.login
                     self.userEmailLabel.text = user.email
+                    self.avatar.image = user.avatar
                 }
             case .failure(let error):
                 print(error)

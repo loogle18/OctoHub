@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Octokit
 import Locksmith
 
 @UIApplicationMain
@@ -21,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let token = Locksmith.loadDataForUserAccount(userAccount: "octoHubUser")?["token"] as? String {
             let profileNVC = storyboard.instantiateViewController(withIdentifier: "ProfileNVC") as! UINavigationController
             let profileVC = profileNVC.topViewController as! ProfileViewController
-            profileVC.config = TokenConfiguration(token)
+            profileVC.token = token
             self.window?.rootViewController = profileNVC
         } else {
             self.window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC")

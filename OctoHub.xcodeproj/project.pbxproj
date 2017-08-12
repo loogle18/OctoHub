@@ -15,9 +15,10 @@
 		A199AADB1F32482C00DE9130 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199AADA1F32482C00DE9130 /* ProfileViewController.swift */; };
 		A199AADD1F32498600DE9130 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199AADC1F32498600DE9130 /* LoginViewController.swift */; };
 		A199AAE41F3265ED00DE9130 /* AnimatableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199AAE31F3265ED00DE9130 /* AnimatableUITextField.swift */; };
+		A1C3BB911F3FA29900C03606 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3BB901F3FA29900C03606 /* User.swift */; };
 		A1E93FA61F36144D00FDFEE0 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E93FA51F36144D00FDFEE0 /* String.swift */; };
 		A1E93FA81F36342900FDFEE0 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E93FA71F36342900FDFEE0 /* UIColor.swift */; };
-		A1F36BF41F30EB0D002C1DAA /* GithubAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F36BF31F30EB0D002C1DAA /* GithubAuthService.swift */; };
+		A1E93FAE1F3F2C0D00FDFEE0 /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E93FAD1F3F2C0D00FDFEE0 /* GithubService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,9 +33,10 @@
 		A199AADA1F32482C00DE9130 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A199AADC1F32498600DE9130 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A199AAE31F3265ED00DE9130 /* AnimatableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableUITextField.swift; sourceTree = "<group>"; };
+		A1C3BB901F3FA29900C03606 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A1E93FA51F36144D00FDFEE0 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A1E93FA71F36342900FDFEE0 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		A1F36BF31F30EB0D002C1DAA /* GithubAuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAuthService.swift; sourceTree = "<group>"; };
+		A1E93FAD1F3F2C0D00FDFEE0 /* GithubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
 		AA9A084941F1E42A84630570 /* Pods_OctoHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OctoHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 		A14F2FA61EEAFE94001D9A4D /* OctoHub */ = {
 			isa = PBXGroup;
 			children = (
+				A1C3BB8F1F3FA28600C03606 /* Models */,
 				A1E93FA11F360C3D00FDFEE0 /* Extensions */,
 				A199AAE21F3265D900DE9130 /* TextFields */,
 				A199AAD91F32478400DE9130 /* ViewControllers */,
@@ -109,6 +112,14 @@
 			path = TextFields;
 			sourceTree = "<group>";
 		};
+		A1C3BB8F1F3FA28600C03606 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A1C3BB901F3FA29900C03606 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A1E93FA11F360C3D00FDFEE0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +132,7 @@
 		A1F36BF21F30EAE5002C1DAA /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A1F36BF31F30EB0D002C1DAA /* GithubAuthService.swift */,
+				A1E93FAD1F3F2C0D00FDFEE0 /* GithubService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -262,9 +273,10 @@
 				A1E93FA61F36144D00FDFEE0 /* String.swift in Sources */,
 				A1E93FA81F36342900FDFEE0 /* UIColor.swift in Sources */,
 				A199AAE41F3265ED00DE9130 /* AnimatableUITextField.swift in Sources */,
+				A1E93FAE1F3F2C0D00FDFEE0 /* GithubService.swift in Sources */,
+				A1C3BB911F3FA29900C03606 /* User.swift in Sources */,
 				A199AADD1F32498600DE9130 /* LoginViewController.swift in Sources */,
 				A199AADB1F32482C00DE9130 /* ProfileViewController.swift in Sources */,
-				A1F36BF41F30EB0D002C1DAA /* GithubAuthService.swift in Sources */,
 				A14F2FA81EEAFE94001D9A4D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -42,11 +42,11 @@ class LoginViewController: UIViewController {
     @IBAction func signInAction() {
         let (isLoginValid, isPasswordValid) = (loginField.validate(), passwordField.validate())
         if (isLoginValid && isPasswordValid) {
-            GithubAuthService.createNewAuthentification(from: loginField.text!, and: passwordField.text!) { config in
+            GithubService.createAuth(from: loginField.text!, and: passwordField.text!) { token in
                 DispatchQueue.main.async {
                     let profileNVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileNVC") as! UINavigationController
                     let profileVC = profileNVC.topViewController as! ProfileViewController
-                    profileVC.config = config
+                    profileVC.token = token
                     
                     self.present(profileNVC, animated: true, completion: nil)
                 }

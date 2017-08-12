@@ -1,24 +1,18 @@
 PODS:
   - Alamofire (4.5.0)
   - Locksmith (3.0.0)
-  - NBNRequestKit (2.0.2)
-  - OctoKit.swift (0.7.3):
-    - NBNRequestKit (~> 2.0)
   - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - Locksmith
-  - OctoKit.swift
   - SWRevealViewController (<= 2.3.0)
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   Locksmith: 310b4cc5031af5728bf4db5d4de547a5100c6a3b
-  NBNRequestKit: 70d514748747aca66e2e2ed17340f91d5ed6d1d4
-  OctoKit.swift: e1c2de583a16cce003fe2321ac0fecc3dcacc5e3
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
 
-PODFILE CHECKSUM: c91c5a1c5c93ad265f37f54489c504f462fc5b99
+PODFILE CHECKSUM: 4f68bb6cf220824f12ba7f7c74917653ec468f00
 
 COCOAPODS: 1.2.1
