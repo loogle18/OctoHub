@@ -22,22 +22,17 @@ struct GithubService {
         self.token = token
     }
     
-    enum UserResponse {
-        case success(User)
-        case failure(String)
-    }
-    
-    func me(completion: @escaping (_ response: UserResponse) -> Void) {
+    func me(completion: @escaping (_ response: Response<User>) -> Void) {
         Alamofire.request(userUrl, parameters: ["access_token": token]).responseData { response in
             if response.result.isSuccess, let data = response.result.value {
                 do {
                     let user = try JSONDecoder().decode(User.self, from: data)
-                    completion(UserResponse.success(user))
+                    completion(Response.success(user))
                 } catch {
-                    completion(UserResponse.failure("Something went wrong"))
+                    completion(Response.failure("Something went wrong"))
                 }
             } else {
-                completion(UserResponse.failure("Something went wrong"))
+                completion(Response.failure("Something went wrong"))
             }
         }
     }
