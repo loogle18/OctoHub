@@ -16,6 +16,8 @@ class ProfileViewController: ViewController {
     @IBOutlet weak var userBioLabel: UILabel!
     @IBOutlet weak var userFollowersLabel: UILabel!
     @IBOutlet weak var userFollowingLabel: UILabel!
+    @IBOutlet weak var topUserLoginConstraint: NSLayoutConstraint!
+    @IBOutlet weak var userLabelHeightConstraint: NSLayoutConstraint!
     
     var token: String!
     
@@ -36,12 +38,20 @@ class ProfileViewController: ViewController {
             switch response {
             case .success(let user):
                 DispatchQueue.main.async {
-                    self.userNameLabel.text = user.name
                     self.userLoginLabel.text = user.login
                     self.userBioLabel.text = user.bio
                     self.avatar.image = user.avatar
                     self.userFollowersLabel.text = String(user.followers)
                     self.userFollowingLabel.text = String(user.following)
+                    
+                    if let userName = user.name {
+                        self.userNameLabel.text = userName
+                    } else {
+                        self.topUserLoginConstraint.constant = 0
+                        self.userLabelHeightConstraint.constant = 40
+                        self.userNameLabel.frame.size.height = 0
+                        self.userNameLabel.text = ""
+                    }
                 }
             case .failure(let error):
                 self.showAlert(message: error)
