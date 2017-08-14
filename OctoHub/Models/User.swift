@@ -10,7 +10,7 @@ import UIKit
 
 class User: Decodable {
     let id: UInt
-    let name: String
+    let name: String?
     let login: String
     let email: String?
     let bio: String?
@@ -35,14 +35,14 @@ class User: Decodable {
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decode(UInt.self, forKey: .id)
-        name = try values.decode(String.self, forKey: .name)
+        name = try? values.decode(String.self, forKey: .name)
         login = try values.decode(String.self, forKey: .login)
-        avatarUrl = try values.decode(String.self, forKey: .avatarUrl)
-        email = try values.decode(String.self, forKey: .email)
-        bio = try values.decode(String.self, forKey: .bio)
-        company = try values.decode(String.self, forKey: .company)
-        blog = try values.decode(String.self, forKey: .blog)
-        location = try values.decode(String.self, forKey: .location)
+        avatarUrl = try? values.decode(String.self, forKey: .avatarUrl)
+        email = try? values.decode(String.self, forKey: .email)
+        bio = try? values.decode(String.self, forKey: .bio)
+        company = try? values.decode(String.self, forKey: .company)
+        blog = try? values.decode(String.self, forKey: .blog)
+        location = try? values.decode(String.self, forKey: .location)
         followers = try values.decode(UInt64.self, forKey: .followers)
         following = try values.decode(UInt64.self, forKey: .following)
     }
