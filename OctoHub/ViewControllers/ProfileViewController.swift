@@ -21,7 +21,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         let navigationBar = self.navigationController!.navigationBar
         navigationBar.barTintColor = UIColor.customBlue
-        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         navigationBar.setValue(true, forKey: "hidesShadow")
         navigationBar.isTranslucent = false
         topProfileView.layer.backgroundColor = UIColor.customBlue.cgColor

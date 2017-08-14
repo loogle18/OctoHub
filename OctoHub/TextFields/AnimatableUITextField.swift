@@ -58,7 +58,7 @@ class AnimatableUITextField: UITextField, UITextFieldDelegate {
         }
         
         self.attributedPlaceholder = NSAttributedString(string: newPlaceholderText!,
-                                                        attributes: [NSForegroundColorAttributeName: UIColor.customDarkGray])
+                                                        attributes: [NSAttributedStringKey.foregroundColor: UIColor.customDarkGray])
         
         return isValid
     }
@@ -67,7 +67,7 @@ class AnimatableUITextField: UITextField, UITextFieldDelegate {
         setOriginPlaceholder()
     }
     
-    func textFieldChanged(_ textField: UITextField) {
+    @objc func textFieldChanged(_ textField: UITextField) {
         setOriginPlaceholder()
     }
     
@@ -83,7 +83,7 @@ class AnimatableUITextField: UITextField, UITextFieldDelegate {
     
     private func setOriginPlaceholder() {
         self.attributedPlaceholder = NSAttributedString(string: originPlaceholder,
-                                                        attributes: [NSForegroundColorAttributeName: UIColor.customDarkGray])
+                                                        attributes: [NSAttributedStringKey.foregroundColor: UIColor.customDarkGray])
     }
 
     private func shake() {
