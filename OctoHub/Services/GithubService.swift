@@ -37,21 +37,25 @@ struct GithubService {
         }
     }
     
-    static func createAuth(from login: String, and password: String, completion: @escaping (String?) -> Void) {
+    static func createAuth(from login: String, and password: String, completion: @escaping (_ response: ResponseAuth) -> Void) {
         let encodedCredentials = Data("\(login):\(password)".utf8).base64EncodedString().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         let headers: HTTPHeaders = ["Content-Type": "application/json", "Accept": "application/json", "Authorization": "Basic \(encodedCredentials)"]
-        var accessToken: String?
         
         Alamofire.request(authorizationsUrl, method: .post, parameters: authParams, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
-            if let data = response.result.value as? Dictionary<String, Any>, let tokenData = data["token"] as? String {
+            if response.result.isSuccess, let data = response.value as? Dictionary<String, Any>, let accessToken = data["token"] as? String {
                 do {
-                    try Locksmith.saveData(data: ["token": tokenData], forUserAccount: "octoHubUser")
+                    try Locksmith.saveData(data: ["token": accessToken], forUserAccount: "octoHubUser")
                 } catch {
                     print("Something wrong with storing token into Locksmith")
                 }
-                accessToken = tokenData
+                completion(ResponseAuth.success(accessToken))
+            } else {
+                if let data = response.value as? Dictionary<String, Any>, let message = data["message"] as? String {
+                    completion(ResponseAuth.failure(message))
+                } else {
+                    completion(ResponseAuth.failure("Something went wrong"))
+                }
             }
-            completion(accessToken)
         }
     }
 }
