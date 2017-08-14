@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: ViewController {
     @IBOutlet weak var loginField: AnimatableUITextField!
     @IBOutlet weak var passwordField: AnimatableUITextField!
     @IBOutlet weak var signInButton: UIButton!
@@ -45,14 +45,14 @@ class LoginViewController: UIViewController {
             GithubService.createAuth(from: loginField.text!, and: passwordField.text!) { response in
                 DispatchQueue.main.async {
                     switch response {
-                        case .success(let token):
-                            let profileNVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileNVC") as! UINavigationController
-                            let profileVC = profileNVC.topViewController as! ProfileViewController
-                            profileVC.token = token
+                    case .success(let token):
+                        let profileNVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileNVC") as! UINavigationController
+                        let profileVC = profileNVC.topViewController as! ProfileViewController
+                        profileVC.token = token
                     
-                            self.present(profileNVC, animated: true, completion: nil)
-                        case .failure(let error):
-                            print(error)
+                        self.present(profileNVC, animated: true, completion: nil)
+                    case .failure(let error):
+                        self.showAlert(message: error)
                     }
                 }
             }

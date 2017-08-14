@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: ViewController {
     @IBOutlet weak var topProfileView: UIView!
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -40,7 +40,7 @@ class ProfileViewController: UIViewController {
                     self.avatar.image = user.avatar
                 }
             case .failure(let error):
-                print(error)
+                self.showAlert(message: error)
             }
         }
     }

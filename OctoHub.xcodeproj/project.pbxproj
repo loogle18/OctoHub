@@ -17,6 +17,7 @@
 		A199AAE41F3265ED00DE9130 /* AnimatableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199AAE31F3265ED00DE9130 /* AnimatableUITextField.swift */; };
 		A1BD26771F40763E002A54D7 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD26761F40763E002A54D7 /* Response.swift */; };
 		A1BD26791F41CD93002A54D7 /* ResponseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD26781F41CD93002A54D7 /* ResponseAuth.swift */; };
+		A1BD267E1F41E57E002A54D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD267D1F41E57E002A54D7 /* ViewController.swift */; };
 		A1C3BB911F3FA29900C03606 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3BB901F3FA29900C03606 /* User.swift */; };
 		A1E93FA61F36144D00FDFEE0 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E93FA51F36144D00FDFEE0 /* String.swift */; };
 		A1E93FA81F36342900FDFEE0 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E93FA71F36342900FDFEE0 /* UIColor.swift */; };
@@ -37,6 +38,7 @@
 		A199AAE31F3265ED00DE9130 /* AnimatableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableUITextField.swift; sourceTree = "<group>"; };
 		A1BD26761F40763E002A54D7 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		A1BD26781F41CD93002A54D7 /* ResponseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseAuth.swift; sourceTree = "<group>"; };
+		A1BD267D1F41E57E002A54D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A1C3BB901F3FA29900C03606 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A1E93FA51F36144D00FDFEE0 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A1E93FA71F36342900FDFEE0 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				A199AADA1F32482C00DE9130 /* ProfileViewController.swift */,
 				A199AADC1F32498600DE9130 /* LoginViewController.swift */,
+				A1BD267D1F41E57E002A54D7 /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				A1E93FA81F36342900FDFEE0 /* UIColor.swift in Sources */,
 				A199AAE41F3265ED00DE9130 /* AnimatableUITextField.swift in Sources */,
 				A1E93FAE1F3F2C0D00FDFEE0 /* GithubService.swift in Sources */,
+				A1BD267E1F41E57E002A54D7 /* ViewController.swift in Sources */,
 				A1BD26771F40763E002A54D7 /* Response.swift in Sources */,
 				A1C3BB911F3FA29900C03606 /* User.swift in Sources */,
 				A1BD26791F41CD93002A54D7 /* ResponseAuth.swift in Sources */,
