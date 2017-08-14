@@ -13,7 +13,9 @@ class ProfileViewController: ViewController {
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userLoginLabel: UILabel!
-    @IBOutlet weak var userEmailLabel: UILabel!
+    @IBOutlet weak var userBioLabel: UILabel!
+    @IBOutlet weak var userFollowersLabel: UILabel!
+    @IBOutlet weak var userFollowingLabel: UILabel!
     
     var token: String!
     
@@ -25,7 +27,7 @@ class ProfileViewController: ViewController {
         navigationBar.setValue(true, forKey: "hidesShadow")
         navigationBar.isTranslucent = false
         topProfileView.layer.backgroundColor = UIColor.customBlue.cgColor
-        avatar.layer.cornerRadius = 40
+        avatar.layer.cornerRadius = 20
         loadCurrentUser()
     }
     
@@ -36,8 +38,10 @@ class ProfileViewController: ViewController {
                 DispatchQueue.main.async {
                     self.userNameLabel.text = user.name
                     self.userLoginLabel.text = user.login
-                    self.userEmailLabel.text = user.email
+                    self.userBioLabel.text = user.bio
                     self.avatar.image = user.avatar
+                    self.userFollowersLabel.text = String(user.followers)
+                    self.userFollowingLabel.text = String(user.following)
                 }
             case .failure(let error):
                 self.showAlert(message: error)
