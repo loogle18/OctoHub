@@ -12,6 +12,7 @@
 		A14F2FAD1EEAFE94001D9A4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14F2FAB1EEAFE94001D9A4D /* Main.storyboard */; };
 		A14F2FAF1EEAFE94001D9A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14F2FAE1EEAFE94001D9A4D /* Assets.xcassets */; };
 		A14F2FB21EEAFE94001D9A4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14F2FB01EEAFE94001D9A4D /* LaunchScreen.storyboard */; };
+		A18C52F91F43312600BA6622 /* SpinnerUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18C52F81F43312600BA6622 /* SpinnerUIImageView.swift */; };
 		A199AADB1F32482C00DE9130 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199AADA1F32482C00DE9130 /* ProfileViewController.swift */; };
 		A199AADD1F32498600DE9130 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199AADC1F32498600DE9130 /* LoginViewController.swift */; };
 		A199AAE41F3265ED00DE9130 /* AnimatableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199AAE31F3265ED00DE9130 /* AnimatableUITextField.swift */; };
@@ -33,6 +34,7 @@
 		A14F2FAE1EEAFE94001D9A4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A14F2FB11EEAFE94001D9A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A14F2FB31EEAFE94001D9A4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A18C52F81F43312600BA6622 /* SpinnerUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerUIImageView.swift; sourceTree = "<group>"; };
 		A199AADA1F32482C00DE9130 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A199AADC1F32498600DE9130 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A199AAE31F3265ED00DE9130 /* AnimatableUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableUITextField.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		A14F2FA61EEAFE94001D9A4D /* OctoHub */ = {
 			isa = PBXGroup;
 			children = (
+				A18C52F71F432C0300BA6622 /* ImageViews */,
 				A1BD26751F407631002A54D7 /* Enums */,
 				A1C3BB8F1F3FA28600C03606 /* Models */,
 				A1E93FA11F360C3D00FDFEE0 /* Extensions */,
@@ -100,6 +103,14 @@
 				A14F2FB31EEAFE94001D9A4D /* Info.plist */,
 			);
 			path = OctoHub;
+			sourceTree = "<group>";
+		};
+		A18C52F71F432C0300BA6622 /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				A18C52F81F43312600BA6622 /* SpinnerUIImageView.swift */,
+			);
+			path = ImageViews;
 			sourceTree = "<group>";
 		};
 		A199AAD91F32478400DE9130 /* ViewControllers */ = {
@@ -294,6 +305,7 @@
 				A1E93FAE1F3F2C0D00FDFEE0 /* GithubService.swift in Sources */,
 				A1BD267E1F41E57E002A54D7 /* ViewController.swift in Sources */,
 				A1BD26771F40763E002A54D7 /* Response.swift in Sources */,
+				A18C52F91F43312600BA6622 /* SpinnerUIImageView.swift in Sources */,
 				A1C3BB911F3FA29900C03606 /* User.swift in Sources */,
 				A1BD26791F41CD93002A54D7 /* ResponseAuth.swift in Sources */,
 				A199AADD1F32498600DE9130 /* LoginViewController.swift in Sources */,

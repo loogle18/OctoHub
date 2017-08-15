@@ -32,6 +32,7 @@ class ProfileViewController: ViewController {
         navigationBar.isTranslucent = false
         topProfileView.layer.backgroundColor = UIColor.customBlue.cgColor
         avatar.layer.cornerRadius = 20
+        showActivityIndicator()
         loadCurrentUserAndUpdateUI()
     }
     
@@ -50,6 +51,7 @@ class ProfileViewController: ViewController {
             case .failure(let error):
                 self.showAlert(message: error)
             }
+            self.hideActivityIndicator()
         }
     }
     
