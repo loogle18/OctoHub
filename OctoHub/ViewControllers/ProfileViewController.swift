@@ -16,8 +16,10 @@ class ProfileViewController: ViewController {
     @IBOutlet weak var userBioLabel: UILabel!
     @IBOutlet weak var userFollowersLabel: UILabel!
     @IBOutlet weak var userFollowingLabel: UILabel!
-    @IBOutlet weak var topUserLoginConstraint: NSLayoutConstraint!
-    @IBOutlet weak var userLabelHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var userLoginTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var userLoginHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var userBioTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
     
     var token: String!
     
@@ -30,32 +32,46 @@ class ProfileViewController: ViewController {
         navigationBar.isTranslucent = false
         topProfileView.layer.backgroundColor = UIColor.customBlue.cgColor
         avatar.layer.cornerRadius = 20
-        loadCurrentUser()
+        loadCurrentUserAndUpdateUI()
     }
     
-    func loadCurrentUser() {
+    func loadCurrentUserAndUpdateUI() {
         GithubService(token).me() { response in
             switch response {
             case .success(let user):
                 DispatchQueue.main.async {
                     self.userLoginLabel.text = user.login
-                    self.userBioLabel.text = user.bio
                     self.avatar.image = user.avatar
                     self.userFollowersLabel.text = String(user.followers)
                     self.userFollowingLabel.text = String(user.following)
                     
-                    if let userName = user.name {
-                        self.userNameLabel.text = userName
-                    } else {
-                        self.topUserLoginConstraint.constant = 0
-                        self.userLabelHeightConstraint.constant = 40
-                        self.userNameLabel.frame.size.height = 0
-                        self.userNameLabel.text = ""
-                    }
+                    self.updateTopViewDataAndUI(userName: user.name, userBio: user.bio)
                 }
             case .failure(let error):
                 self.showAlert(message: error)
             }
         }
+    }
+    
+    private func updateTopViewDataAndUI(userName: String?, userBio: String?) {
+        if let name = userName {
+            userNameLabel.text = name
+        } else {
+            userLoginTopConstraint.constant = 0
+            userLoginHeightConstraint.constant = 40
+            userNameLabel.frame.size.height = 0
+            userNameLabel.text = ""
+        }
+        
+        if let bio = userBio {
+            userBioLabel.text = bio
+        } else {
+            userBioLabel.frame.size.height = 0
+            userBioTopConstraint.constant = 0
+            userBioLabel.text = ""
+        }
+        
+        userBioLabel.sizeToFit()
+        topViewHeightConstraint.constant = 118 + userBioTopConstraint.constant + userBioLabel.frame.height
     }
 }
