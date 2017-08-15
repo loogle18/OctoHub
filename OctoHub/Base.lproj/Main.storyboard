@@ -140,7 +140,14 @@
                             <constraint firstItem="axG-uQ-fN2" firstAttribute="top" secondItem="Cra-1E-wGt" secondAttribute="bottom" id="e8X-IK-GST"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="T4d-kr-Iyr"/>
+                    <navigationItem key="navigationItem" id="T4d-kr-Iyr">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger" id="vzu-kP-FdJ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="more" id="CXN-EF-9M3">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="avatar" destination="0HG-Xm-xGC" id="FbB-rv-8pa"/>
                         <outlet property="topProfileView" destination="axG-uQ-fN2" id="kK8-4e-Y5A"/>
@@ -266,6 +273,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="hamburger" width="25" height="25"/>
         <image name="login-background" width="375" height="667"/>
+        <image name="more" width="25" height="25"/>
     </resources>
 </document>
