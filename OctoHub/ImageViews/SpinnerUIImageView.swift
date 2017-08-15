@@ -11,10 +11,10 @@ import UIKit
 class SpinnerUIImageView: UIImageView {
     let loadingImages = (0...8).map { UIImage(named: "spinner-set-\($0)")! }
     
-    init(x: CGFloat = 0, y: CGFloat = 0, size: CGFloat) {
+    init(x: CGFloat = 0, y: CGFloat = 0, parentWidth: CGFloat, parentHeight: CGFloat) {
         super.init(image: loadingImages.first)
-        self.frame = CGRect(x: x, y: y, width: size / 3, height: size / 3)
-        self.center = CGPoint(x: size / 2, y: size / 2)
+        self.frame = CGRect(x: x, y: y, width: 40, height: 40)
+        self.center = CGPoint(x: parentWidth / 2, y: parentHeight / 2)
     }
     
     required init?(coder aDecoder: NSCoder) {

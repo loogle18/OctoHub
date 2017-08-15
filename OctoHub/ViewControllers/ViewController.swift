@@ -24,24 +24,19 @@ class ViewController: UIViewController {
     
     func showActivityIndicator() {
         let blurEffect = UIBlurEffect(style: .extraLight)
+        let viewFrame = self.view.frame
         blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = self.view.frame
+        blurEffectView.frame = viewFrame
+        spinner = SpinnerUIImageView(parentWidth: viewFrame.width, parentHeight: viewFrame.height)
         
-        let spinnerWrapperView = UIView()
-        let spinnerWrapperSize = CGFloat(120)
+        blurEffectView.contentView.addSubview(spinner)
         
-        spinnerWrapperView.frame = CGRect(x: 0.0, y: 0.0, width: spinnerWrapperSize, height: spinnerWrapperSize)
-        spinnerWrapperView.center = CGPoint(x: blurEffectView.bounds.size.width / 2, y: blurEffectView.bounds.size.height / 2 - 44)
-        spinnerWrapperView.backgroundColor = UIColor.white
-        spinnerWrapperView.clipsToBounds = true
-        spinnerWrapperView.layer.cornerRadius = 10
+        if let navController = self.navigationController {
+            navController.view.addSubview(blurEffectView)
+        } else {
+            self.view.addSubview(blurEffectView)
+        }
         
-        spinner = SpinnerUIImageView(size: spinnerWrapperSize)
-        
-        spinnerWrapperView.addSubview(spinner)
-        
-        blurEffectView.contentView.addSubview(spinnerWrapperView)
-        self.view.insertSubview(blurEffectView, at: 5)
         spinner.startAnimation()
     }
     
