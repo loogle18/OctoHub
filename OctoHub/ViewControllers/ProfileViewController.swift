@@ -47,11 +47,12 @@ class ProfileViewController: ViewController {
                     self.userFollowingLabel.text = String(user.following)
                     
                     self.updateTopViewDataAndUI(userName: user.name, userBio: user.bio)
+                    self.hideActivityIndicator()
                 }
             case .failure(let error):
+                self.hideActivityIndicator()
                 self.showAlert(message: error)
             }
-            self.hideActivityIndicator()
         }
     }
     
