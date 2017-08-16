@@ -14,8 +14,8 @@ class ProfileViewController: ViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userLoginLabel: UILabel!
     @IBOutlet weak var userBioLabel: UILabel!
-    @IBOutlet weak var userFollowersLabel: UILabel!
-    @IBOutlet weak var userFollowingLabel: UILabel!
+    @IBOutlet weak var userFollowersCountButton: UIButton!
+    @IBOutlet weak var userFollowingCountButton: UIButton!
     @IBOutlet weak var userLoginTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var userLoginHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var userBioTopConstraint: NSLayoutConstraint!
@@ -43,9 +43,8 @@ class ProfileViewController: ViewController {
                 DispatchQueue.main.async {
                     self.userLoginLabel.text = user.login
                     self.avatar.image = user.avatar
-                    self.userFollowersLabel.text = String(user.followers)
-                    self.userFollowingLabel.text = String(user.following)
-                    
+                    self.userFollowersCountButton.setTitle(String(user.followers), for: .normal)
+                    self.userFollowingCountButton.setTitle(String(user.following), for: .normal)
                     self.updateTopViewDataAndUI(userName: user.name, userBio: user.bio)
                     self.hideActivityIndicator()
                 }
@@ -75,6 +74,6 @@ class ProfileViewController: ViewController {
         }
         
         userBioLabel.sizeToFit()
-        topViewHeightConstraint.constant = 118 + userBioTopConstraint.constant + userBioLabel.frame.height
+        topViewHeightConstraint.constant = 104 + userBioTopConstraint.constant + userBioLabel.frame.height
     }
 }
