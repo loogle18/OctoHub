@@ -8,7 +8,15 @@
 
 import UIKit
 
-class TokenLoginViewController: ViewController {    
+class TokenLoginViewController: ViewController {
+    @IBOutlet weak var signInButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        signInButton.layer.cornerRadius = 4
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.makeTransparentNavigationBar = true
         
