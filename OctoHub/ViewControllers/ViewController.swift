@@ -11,9 +11,14 @@ import UIKit
 class ViewController: UIViewController {
     var blurEffectView: UIVisualEffectView!
     var spinner: SpinnerUIImageView!
+    var makeTransparentNavigationBar = false
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if makeTransparentNavigationBar, let navBar = self.navigationController?.navigationBar {
+            navBar.setBackgroundImage(UIImage(), for: .default)
+            navBar.setValue(true, forKey: "hidesShadow")
+        }
     }
     
     func showAlert(title: String = "Oops", message: String) {

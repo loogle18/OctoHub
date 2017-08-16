@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             profileVC.token = token
             self.window?.rootViewController = profileNVC
         } else {
-            self.window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+            self.window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "LoginNVC")
         }
         
         self.window?.makeKeyAndVisible()

@@ -12,6 +12,7 @@ class LoginViewController: ViewController {
     @IBOutlet weak var loginField: AnimatableUITextField!
     @IBOutlet weak var passwordField: AnimatableUITextField!
     @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var orLabel: UILabel!
     
     var isStatusBarHidden = false
     
@@ -20,6 +21,7 @@ class LoginViewController: ViewController {
         
         signInButton.layer.cornerRadius = 4
         signInButton.layer.backgroundColor = UIColor.customBlue.cgColor
+        orLabel.textColor = UIColor.customDarkGray
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.keyboardWillShow),
@@ -29,6 +31,12 @@ class LoginViewController: ViewController {
                                                selector: #selector(self.keyboardWillHide),
                                                name: NSNotification.Name.UIKeyboardWillHide,
                                                object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.makeTransparentNavigationBar = true
+        
+        super.viewWillAppear(animated)
     }
     
     override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {

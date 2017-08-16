@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		39D886B75A1009A534917169 /* Pods_OctoHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9A084941F1E42A84630570 /* Pods_OctoHub.framework */; };
+		A14A4E931F447ED20083A968 /* TokenLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A4E921F447ED20083A968 /* TokenLoginViewController.swift */; };
 		A14F2FA81EEAFE94001D9A4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14F2FA71EEAFE94001D9A4D /* AppDelegate.swift */; };
 		A14F2FAD1EEAFE94001D9A4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14F2FAB1EEAFE94001D9A4D /* Main.storyboard */; };
 		A14F2FAF1EEAFE94001D9A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14F2FAE1EEAFE94001D9A4D /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		5412971F0BDAEF27E4C6CC75 /* Pods-OctoHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctoHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-OctoHub/Pods-OctoHub.release.xcconfig"; sourceTree = "<group>"; };
 		784A551D995DA721127FE20C /* Pods-OctoHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctoHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OctoHub/Pods-OctoHub.debug.xcconfig"; sourceTree = "<group>"; };
+		A14A4E921F447ED20083A968 /* TokenLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenLoginViewController.swift; sourceTree = "<group>"; };
 		A14F2FA41EEAFE94001D9A4D /* OctoHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctoHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A14F2FA71EEAFE94001D9A4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A14F2FAC1EEAFE94001D9A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				A199AADA1F32482C00DE9130 /* ProfileViewController.swift */,
 				A199AADC1F32498600DE9130 /* LoginViewController.swift */,
 				A1BD267D1F41E57E002A54D7 /* ViewController.swift */,
+				A14A4E921F447ED20083A968 /* TokenLoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				A199AAE41F3265ED00DE9130 /* AnimatableUITextField.swift in Sources */,
 				A1E93FAE1F3F2C0D00FDFEE0 /* GithubService.swift in Sources */,
 				A1BD267E1F41E57E002A54D7 /* ViewController.swift in Sources */,
+				A14A4E931F447ED20083A968 /* TokenLoginViewController.swift in Sources */,
 				A1BD26771F40763E002A54D7 /* Response.swift in Sources */,
 				A18C52F91F43312600BA6622 /* SpinnerUIImageView.swift in Sources */,
 				A1C3BB911F3FA29900C03606 /* User.swift in Sources */,
