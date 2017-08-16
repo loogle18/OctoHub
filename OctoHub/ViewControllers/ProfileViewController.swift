@@ -32,6 +32,7 @@ class ProfileViewController: ViewController {
         navigationBar.isTranslucent = false
         topProfileView.layer.backgroundColor = UIColor.customBlue.cgColor
         avatar.layer.cornerRadius = 20
+        topViewHeightConstraint.constant = self.view.frame.height
         showActivityIndicator()
         loadCurrentUserAndUpdateUI()
     }
@@ -74,6 +75,9 @@ class ProfileViewController: ViewController {
         }
         
         userBioLabel.sizeToFit()
-        topViewHeightConstraint.constant = 104 + userBioTopConstraint.constant + userBioLabel.frame.height
+        UIView.animate(withDuration: 0.6) {
+            self.topViewHeightConstraint.constant = 104 + self.userBioTopConstraint.constant + self.userBioLabel.frame.height
+            self.view.layoutIfNeeded()
+        }
     }
 }
