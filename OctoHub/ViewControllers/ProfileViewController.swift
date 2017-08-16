@@ -75,9 +75,9 @@ class ProfileViewController: ViewController {
         }
         
         userBioLabel.sizeToFit()
-        UIView.animate(withDuration: 0.6) {
+        UIView.animate(withDuration: 0.9, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 12, options: [], animations: ({
             self.topViewHeightConstraint.constant = 104 + self.userBioTopConstraint.constant + self.userBioLabel.frame.height
             self.view.layoutIfNeeded()
-        }
+        }))
     }
 }
